@@ -3,7 +3,7 @@ function getValue(mean){
   	return 'number';
   else if (typeof mean =='string')
   	return 'string';
-  else return 'underfined';
+  else return undefined;
 }
 getValue(5);
 module.exports =getValue;
