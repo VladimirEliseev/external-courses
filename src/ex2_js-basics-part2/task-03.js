@@ -14,5 +14,4 @@ function getEvenAndOddElementArray(array){
 	arrayCalc=[even,odd,zero];
 	return arrayCalc
 }
-getEvenAndOddElementArray([0,1,2]);
 module.exports =getEvenAndOddElementArray;

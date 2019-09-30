@@ -8,5 +8,4 @@ function compareMeanArray(array){
 	} 
 	return true
 }
-compareMeanArray([0,0,0]);
 module.exports =compareMeanArray;

@@ -1,11 +1,11 @@
-function getValue(mean){
-  if(typeof mean ==='number'){
+  if((typeof value ==='number') && isNaN(value)===false){
+function getValue(value){
+  if(typeof value ==='number' && isNaN(value)===false){
   	return 'number';
   }
-  else if (typeof mean ==='string'){
+  else if (typeof value ==='string'){
   	return 'string';
   }
   return undefined;
 }
-getValue(5);
 module.exports =getValue;

@@ -7,5 +7,4 @@ function getMaxMeanArray(array){
 	} 
 	return max;
 }
-getMaxMeanArray([1,0,3]);
 module.exports =getMaxMeanArray;

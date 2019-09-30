@@ -5,5 +5,4 @@ function getArray(array){
   	console.log(array.length);
    return array
 }
-getArray([0,1]);
 module.exports =getArray;
