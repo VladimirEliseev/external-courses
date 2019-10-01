@@ -1,4 +1,3 @@
-  if((typeof value ==='number') && isNaN(value)===false){
 function getValue(value){
   if(typeof value ==='number' && isNaN(value)===false){
   	return 'number';
