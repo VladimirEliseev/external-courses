@@ -1,5 +1,5 @@
 function getEvenAndOddElementArray(array){
-	let even=0,odd=0,zero=0, arrayCalc=[] ;
+	let even=0,odd=0,zero=0;
 	for (let i=0;i<array.length;i++){
 		if(array[i]===0){
 			zero++;
@@ -11,7 +11,6 @@ function getEvenAndOddElementArray(array){
          	odd++;
          }
 		}
-	arrayCalc=[even,odd,zero];
-	return arrayCalc
+	return [even,odd,zero]
 }
 module.exports =getEvenAndOddElementArray;

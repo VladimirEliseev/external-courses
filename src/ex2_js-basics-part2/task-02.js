@@ -3,6 +3,6 @@ function getArray(array){
   	console.log(array[i]);
   }
   	console.log(array.length);
-   return array
+   return
 }
 module.exports =getArray;

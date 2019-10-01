@@ -23,5 +23,4 @@ function getSimpleNumber(number){
     }
     return SimpleOrComposite;
 }
- getSimpleNumber(8)
 module.exports =getSimpleNumber;

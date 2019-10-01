@@ -1,5 +1,5 @@
 function getValue(value){
-  if(typeof value ==='number' && isNaN(value)===false){
+  if(typeof value ==='number' && !isNaN(value)){
   	return 'number';
   }
   else if (typeof value ==='string'){
