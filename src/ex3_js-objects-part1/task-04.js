@@ -1,10 +1,11 @@
 function checkPropObject(string, object){
+	const copyObject=object;
   for(let key in object){
   	if(key===string){
   		return object;
   	}
 	}
-	object[string]='new';
+	copyObject[string]='new';
 	return object;
 }
 
