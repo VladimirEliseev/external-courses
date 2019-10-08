@@ -1,8 +1,5 @@
-function findSubstringInString(string,subString){
-	if(string.search(subString)!==-1){
-		return true
-	}
-		return false
+function findSubstring(string,subString){
+	return string.search(subString)!==-1
 }
 
-module.exports=findSubstringInString;
+module.exports=findSubstring;

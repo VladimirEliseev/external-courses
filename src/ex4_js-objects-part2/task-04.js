@@ -1,9 +1,8 @@
-function changeFirstSymbInString(string){
-	let newString;
-	let firstSymb=string[0].toUpperCase();
+function changeFirstSymb(string){
+	let newString=string[0].toUpperCase();
 	let remainString=string.substr(1,string.length-1);
-	newString=firstSymb+remainString;
+	newString+=remainString;
 	return newString;
 }
 
-module.exports=changeFirstSymbInString;
+module.exports=changeFirstSymb;

@@ -1,4 +1,4 @@
-function findPropInProtoObject(prop,object){
+function findProp(prop,object){
 	for(let key in object){
 		if(!object.hasOwnProperty(key) && key===prop){
 	 		return object[prop]
@@ -7,4 +7,4 @@ function findPropInProtoObject(prop,object){
 	return undefined
 }
 
-module.exports=findPropInProtoObject;
+module.exports=findProp;

@@ -1,4 +1,4 @@
-function compareLengthStringWithNumber(string,number){
+function getLimitString(string,number){
 	let newString;
   if(string.length>number){
    	newString=string.substr(0,number-1)+'…';
@@ -6,4 +6,4 @@ function compareLengthStringWithNumber(string,number){
   return newString
 }
 
-module.exports=compareLengthStringWithNumber;
+module.exports=getLimitString;

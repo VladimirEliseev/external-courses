@@ -1,6 +1,6 @@
-function createEmptyProtoObject(){
-	object=Object.create(null); 
+function createCopyObject(){
+	const object=Object.create(null); 
 	return object
 }
 
-module.exports=createEmptyProtoObject;
+module.exports= createCopyObject;

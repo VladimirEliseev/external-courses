@@ -1,13 +1,12 @@
-function changeStringToLowCamelCase(string){
-	let newString='',firstSymbWordInArray,remainStringInArray;
+function getLowCamelCase(string){
+	let newString;
 	let arrayWord=string.split(' ');
-	newString+=arrayWord[0].toLowerCase();
+	newString=arrayWord[0].toLowerCase();
 	for(let i=1;i<arrayWord.length;i++){
-		firstSymbWordInArray=arrayWord[i][0].toUpperCase();
-		remainStringInArray=arrayWord[i].substr(1,arrayWord[i].length-1);
-		newString+= firstSymbWordInArray+remainStringInArray.toLowerCase();
+		newString+=arrayWord[i][0].toUpperCase();
+		newString+=arrayWord[i].substr(1,arrayWord[i].length-1).toLowerCase();
 	}
 	return newString
 }
 
-module.exports=changeStringToLowCamelCase;
+module.exports=getLowCamelCase;
