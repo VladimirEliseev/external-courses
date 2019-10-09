@@ -1,6 +1,9 @@
-function createCopypObject(object){
-  const copyObject=object;
-	return copyObject;
+function createCopyObject(object){
+	const newObject;
+  for(let key in object){
+  	newObject[key]=object[key];
+  }
+	return newObject
 }
 
-module.exports=checkPropObject;
+module.exports=createCopyObject;
