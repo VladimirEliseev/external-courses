@@ -1,9 +1,7 @@
 function createCopyObject(object){
-	const newObject;
-  for(let key in object){
-  	newObject[key]=object[key];
-  }
+	const newObject = Object.assign({}, object);
 	return newObject
 }
 
-module.exports=createCopyObject;
+module.exports=createCopyObject;  
+
