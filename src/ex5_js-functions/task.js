@@ -41,9 +41,10 @@ const calculator=(function(){
   }
 
   const reset=function(){
-    return currentState=0;
+    currentState=0;
+    return currentState
   }
-	return { add,subtract,divide,multiply, getResult,reset }
+	return {add,subtract,divide,multiply, getResult,reset}
 }());
 
 module.exports=calculator;
