@@ -1,15 +1,15 @@
 function slice(array, begin=0, end=array.length){
-	let newArray=[],index=0;
+	let newArray=[],index=0,newBegin=begin, newEnd=end;
 	if(begin<0 && end>=0){
-		begin+=array.length;
+		newBegin+=array.length;
 	}else if(begin>=0 && end<0){
-		end+=array.length;
+		newEnd+=array.length;
 	}else if(begin<0 && end<0){
-		begin+=array.length;
-		end+=array.length;
+		newBegin+=array.length;
+		newEnd+=array.length;
 	};
 
-	for(let i=begin;i<end;i++){
+	for(let i=newBegin;i<newEnd;i++){
 		newArray[index]=array[i];
 		index++;
 	}
