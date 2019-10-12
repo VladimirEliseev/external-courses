@@ -5,7 +5,7 @@ function createDeepCopyObject(object) {
 	}else{
 		copyObject={};
 	}
-  for (let key in object) {
+  for (let key in object){
     if (typeof object[key] === "object") {
       copyObject[key]=createDeepCopyObject(object[key]);
     }else{
