@@ -1,6 +1,5 @@
-function createCopyObject(){
-	const object=Object.create(null); 
-	return object
+function createObject(){
+	return Object.create(null)
 }
 
-module.exports= createCopyObject;
+module.exports= createObject;
