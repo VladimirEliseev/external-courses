@@ -1,7 +1,5 @@
 function deleteSpace(string){
 	let newString;
-	//let firstSpace=string.indexOf(' ');
-	//let lastSpace=string.lastIndexOf(' ');
   if(string[0]===' ' && string[string.length-1]===' '){
     newString=string.substr(1,string.length-2)
   }else if (string[0]===' '){
