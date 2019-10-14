@@ -1,5 +1,5 @@
 function createObject(){
-	return Object.create(null)
+  return Object.create(null)
 }
 
 module.exports= createObject;
