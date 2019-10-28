@@ -1,0 +1,18 @@
+body{
+  font-size:12pt;
+}
+input,select,textarea{
+  margin-top: 10px;
+}
+option{
+  margin-left:10px;
+}
+#technologies, #finance{
+  font-weight: bold;
+  font-size:10pt;
+  color:black;
+  margin-left:0px;
+}
+#profession{
+  height: 125px;
+}

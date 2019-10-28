@@ -1,0 +1,19 @@
+tr{
+  line-height:30px;
+}
+
+#heading, .odd{
+  background-color:#e9eef4;
+}
+.even{
+  background-color: ##f2f6fa;
+}
+#col1,#col2,#col4{
+  width:130px;
+}
+#col3{
+  width:180px;
+}
+#heading:hover,tr:hover{
+  background-color: #e3e6ea;
+}
