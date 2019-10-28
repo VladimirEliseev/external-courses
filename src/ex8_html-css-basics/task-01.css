@@ -1,0 +1,23 @@
+div{
+  background-color:#95d727;
+  width:100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+table,tr,td{
+  border-collapse: collapse;
+  border:3px solid black;
+  margin-bottom: 30px;
+}
+img{
+  width:200px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+a{
+  margin-bottom: 30px;
+}
+p{
+  
+  width:800px;
+}
