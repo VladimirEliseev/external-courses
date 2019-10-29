@@ -1,8 +1,4 @@
-body{
-position: relative;
-}
 #main{
-  position: absolute;
   width: 500px;
   height: 400px;
   left: 50%;
@@ -71,16 +67,25 @@ button{
   height: 25px;
   border:1px solid black;
 }
-
+.rule:before{
+  content:'◄';
+  color:red;
+  font-size:20px;
+  padding:1px 5px;
+  margin-left:220px;
+  white-space: nowrap;
+}
 .rule:after{
   content:'Form field here';
   background-color: red;
   color:white;
   font-size:20px;
   padding:1px 5px;
-  margin-left:220px;
+  margin-left:-10px;
   white-space: nowrap;
 }
-#inputEmail:valid + .rule:after, #inputWebsite:valid + .rule:after{
+#inputEmail:valid + .rule:before, #inputWebsite:valid + .rule:before,
+#inputEmail:valid + .rule:after, #inputWebsite:valid + .rule:after
+{
   display: none;
 }
