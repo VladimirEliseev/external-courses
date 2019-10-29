@@ -1,10 +1,8 @@
 'use strict';
 function map(array, callback){
-  let item;
   const newArray=[];
   for(let i=0;i<array.length;i++){
-    item=array[i];
-    newArray[i]=callback(item,i,array);
+    newArray[i]=callback(array[i],i,array);
   }
   return newArray
 }
