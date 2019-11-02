@@ -6,7 +6,7 @@ tr{
   background-color:#e9eef4;
 }
 .even{
-  background-color: ##f2f6fa;
+  background-color: #f2f6fa;
 }
 #col1,#col2,#col4{
   width:130px;
@@ -15,5 +15,5 @@ tr{
   width:180px;
 }
 #heading:hover,tr:hover{
-  background-color: #e3e6ea;
+  background-color: #E3E6EA;
 }
