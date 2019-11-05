@@ -1,0 +1,33 @@
+button{
+  height: 50px;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px black;
+  border:2px solid white;
+  background-color: #cbcbcb;
+}
+span{
+  display: inline-block;
+  width:98%;
+  height: 72%;
+  font-weight: 900;
+  color:#624f4f;
+  font-size: 12pt;
+  text-align: center;
+  border-radius: 8px;
+  background: linear-gradient(to top, #A9A9A9 45%, #C9C9C9 55%);
+  box-shadow: 0px 0px 4px rgba(105,105,105,0.8),0px 0px 10px rgba(105,105,105,0.2);
+}
+span:before{
+  padding-right: 7px;
+  color:#7a7a7a;
+  font-size:22px;
+  content:'★';
+}
+span:after{
+  padding-left: 7px;
+  color:#7a7a7a;
+  font-size:22px;
+  content:'★';
+}
+
