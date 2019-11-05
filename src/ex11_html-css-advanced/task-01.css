@@ -1,0 +1,112 @@
+.textLoad{
+  font-size:50px;
+  animation-name:load;
+  animation-duration:3.2s;
+  animation-iteration-count:infinite;
+}
+#symbol1{
+  animation-delay:0.5s;
+}
+#symbol2{
+  animation-delay:0.8s;
+}
+#symbol3{
+  animation-delay:1.1s;
+}
+#symbol4{
+  animation-delay:1.4s;
+}
+#symbol5{
+  animation-delay:1.7s;
+}
+#symbol6{
+  animation-delay:2s;
+}
+#symbol7{
+  animation-delay:2.3s;
+}
+#symbol8{
+  animation-delay:2.6s;
+}
+#symbol9{
+  animation-delay:2.9s;
+}
+#symbol10{
+  animation-delay:3.2s;
+}
+
+@keyframes load{
+  0%{
+    color:black;
+  }
+  100%{
+    color:white;
+  }
+}
+
+#ball{
+  position: relative;
+  margin-top: 50px;
+  border-radius: 100%;
+  background-color: red;
+  width:100px;
+  height: 100px;
+  animation-name:jumpBall;
+  animation-duration:3.2s;
+  animation-timing-function: cubic-bezier(1,.45,.45,.99);
+  animation-iteration-count:infinite;
+}
+@keyframes jumpBall{
+  0%{
+    left:0;
+  }
+
+  50%{
+    left:200px;
+  }
+  100%{
+    left:0;
+  }
+}
+#infinityAnimation{
+  width:100px;
+  height: 100px;
+  margin-left:50px;
+  animation-duration:10s;
+  animation-iteration-count:infinite;
+  margin-top: 50px;
+  border-radius: 100%;
+  background-color: white;
+    animation-name:infinityAnim;
+}
+@keyframes infinityAnim{
+  from{
+    border-radius: 100%;
+    background: radial-gradient(at top, blue, red);
+  }
+
+  17%{
+    border-radius: 0%;
+  }
+  33%{
+    background: radial-gradient(green, brown);
+  }
+  50%{
+    width:150px;
+    height: 150px;
+    transform: skewX(30deg);
+  }
+  60%{
+    transform: rotate(360deg);
+  }
+  83%{
+    border-radius: 0%;
+    background: radial-gradient(at bottom, green, brown);
+  }
+
+  to{
+    border-radius: 100%;
+    background: black;
+  }
+
+}
