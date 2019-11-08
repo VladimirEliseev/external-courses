@@ -77,10 +77,10 @@
   margin-top: 50px;
   border-radius: 100%;
   background-color: white;
-    animation-name:infinityAnim;
+    animation-name:infinity;
 }
-@keyframes infinityAnim{
-  from{
+@keyframes infinity{
+  0%{
     border-radius: 100%;
     background: radial-gradient(at top, blue, red);
   }
@@ -103,8 +103,7 @@
     border-radius: 0%;
     background: radial-gradient(at bottom, green, brown);
   }
-
-  to{
+  100%{
     border-radius: 100%;
     background: black;
   }

@@ -8,7 +8,7 @@ body{
   font-family: 'Roboto';
 
 }
-#header{
+.header{
   position: fixed;
   display: flex;
   width: 100%;
@@ -16,22 +16,21 @@ body{
   background: #0067A3;
   font-size: 28px;
 }
-#blockNameAndNavicon{
+.infoBlock{
   position: relative;
-  width: 18.5%;
   flex:50%;
   height: 36px;
   left: 0.8%;
   top: 10px;
 }
-#navicon{
+.navicon{
   position: absolute;
   left:0;
   width:6%;
   height:38px;
 
 }
-#name{
+.name{
   position: absolute;
   left:5%;
   width:90%;
@@ -40,33 +39,33 @@ body{
   padding-left:10px;
   white-space: nowrap;
 }
-#blockCreateAndPersonal{
+.personalInfo{
   display: flex;
   flex:50%;
   justify-content: flex-end;
 }
-#create{
+.addButton{
   background-color:white;
   border-radius: 5px;
   width: 181px;
   height: 33px;
-  margin-right: 6%;
+  margin-right: 50px;
   margin-top: 10px;
   border:0;
 }
-#personalAvatar{
+.logo{
   margin-right: 28px;
   margin-top: 8px
 }
-#arrow{
+.arrow{
   position: absolute;
   width:24px;
   height: 100%;
   right:1px;
   top:0;
 }
-#arrow:before,
-#arrow:after{
+.arrow:before,
+.arrow:after{
   content: '';
   position: absolute;
   top:28px;
@@ -74,39 +73,33 @@ body{
   height: 0.1em;
   background-color: white;
 }
-#arrow::before {
+.arrow::before {
   left:2px;
   transform: rotate(45deg);
 }
-#arrow::after {
+.arrow::after {
   left:10px;
   transform: rotate(-45deg);
 }
-#footer{
+.footer{
   position: fixed;
   display: flex;
   bottom: 0;
   width: 100%;
-  height: 56px;
+  height: 37px;
+  padding-top:19px;
+  margin-top:;
   background: #0067A3;
   justify-content: space-between;
   color:white;
   font-size: 18px;
 }
-#footerTask{
-  flex:50%;
-  margin-top:16px;
+.activeTask{
+  margin-left:110px;
 }
-#footerInfo{
-  display: flex;
-  flex:48%;
-  margin-top:16px;
-  justify-content: flex-end;
-  margin-right:2%;
+.finishedTask{
+  margin-right:750px;
 }
-#activeTask{
-  margin-left:10%;
-}
-#finishedTask{
-  margin-left:5%;
+.personalName{
+  margin-right:20px;
 }

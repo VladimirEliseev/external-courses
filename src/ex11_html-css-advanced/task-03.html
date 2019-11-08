@@ -6,34 +6,25 @@
   <title>Kandan</title>
 </head>
   <body>
-    <header id='header'>
-      <div id='blockNameAndNavicon'>
-        <object data="image/navicon.svg" type="image/svg+xml" id='navicon'></object>
-        <span id='name'>Awecome Kanban Board</span>
+    <header class='header'>
+      <div class='infoBlock'>
+        <object data="image/navicon.svg" type="image/svg+xml" class='navicon'></object>
+        <span class='name'>Awecome Kanban Board</span>
       </div>
-      <div id='blockCreateAndPersonal'>
-          <button id='create'>create new list</button>
-          <div id='personalAvatar'>
+      <div class='personalInfo'>
+          <button class='addButton'>create new list</button>
+          <div class='logo'>
             <object data="image/user-menu.svg" type="image/svg+xml"></object>
-            <div id='arrow'></div>
+            <div class='arrow'></div>
           </div>
       </div>
     </header>
     <main>
     </main>
-    <footer id='footer'>
-      <div id='footerTask'>
-        <span id='activeTask'>Active tasks:</span>
-        <span id='activeTaskCount'>&lt;N&gt;</span>
-        <span id='finishedTask'>Finished tasks:</span>
-        <span id='finishedTaskCount'>&lt;M&gt;</span>
-      </div>
-      <div id='footerInfo'>
-        
-        <span id='footerName'>Kanban Board</span>
-        <span id='footerNameYear'>&lt;NAME &gt;,&lt;YEAR&gt;</span>
-      </div>
+    <footer class='footer'>
+        <span class='activeTask'>Active tasks: &lt;N&gt;</span>
+        <span class='finishedTask'>Finished tasks: &lt;M&gt;</span>
+        <span class='personalName'>Kanban Board &lt;Владимир &gt;,&lt;2019&gt;</span>
     </footer>
-
   </body>
 </html>
