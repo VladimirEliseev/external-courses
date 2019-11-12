@@ -1,8 +1,14 @@
 body{
   font-size:12pt;
 }
-input,select,textarea{
+input,select,textarea,label{
   margin-top: 10px;
+}
+.radioGroup{
+  display: flex;
+}
+.labelForRadioGen{
+  margin-top:25px;
 }
 option{
   margin-left:10px;

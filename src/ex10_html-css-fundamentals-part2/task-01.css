@@ -1,4 +1,4 @@
-#circle,#cross{
+.blockImg{
   position: relative;
   width:150px;
   height: 150px;
@@ -21,7 +21,7 @@
   overflow: hidden;
   left:-95px;
   top:-50px;
-  -webkit-mask-image: url("image-mask.png");
-  mask-image: url("image-mask.png");
+  -webkit-mask-image: url("image/image-mask.png");
+  mask-image: url("image/image-mask.png");
   -webkit-mask-size: 300px 300px;
 }

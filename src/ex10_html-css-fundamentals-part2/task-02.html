@@ -15,10 +15,11 @@
         <input type="text" id='firstname'><br>  
         <label for="middlename">Middle Name</label>
         <input type="text" id='middlename'><br>
-
-        <label for="radioGen1">You are</label>
-        <input type="radio" id='radioGen1'>male
-        <input type="radio" id='radioGen2'>female <br> 
+        <div class ='radioGroup'>
+        <label for="radioGen" class='labelForRadioGen'>You are&nbsp;</label>
+          <p><input name='gender' type="radio" class='radioGen' checked>Male</p>
+          <p><input name='gender' type="radio" class='radioGen'>Female</p><br>
+        </div>
         <label for="age">Age</label>
         <input type="number" min=18 max=101 id='age'> <br> 
          <label for="country">Country of Residence</label>

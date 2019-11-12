@@ -4,7 +4,7 @@ table{
   font-family: Calibri;
 }
 .name{
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 #heading{
   text-transform: uppercase;

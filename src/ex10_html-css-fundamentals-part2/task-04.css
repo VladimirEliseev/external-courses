@@ -41,32 +41,37 @@ body{
 }
 #contactContainer{
   display: flex;
+  align-content: center;
   flex-direction: column;
   position: relative;
   padding-left:8%;
-  flex: 13%;
+  flex: 15%;
   padding-right: 19%;
   padding-top:35px;
 }
 #contact{
-  width: 80%;
-  padding-left:10%;
+  width: 82%;
 }
 #locationName{
+  width:70%;
   border-radius: 5px;
   border:2px solid #d4d4d5;
-  padding-top:10px;
+  padding-top:5px;
   height: 30px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size:13px;
 }
-.iconContact, .iconDivide{
-  height: 24px;
-  width:17.5%;
+.iconContact{
+  height: 35px;
+  width:30px;
+  margin-top:5px;
+}
+#iconContact1>path:hover,#iconContact2>path:hover,#iconContact3>path:hover{
+  fill:#5e9bc9;
 }
 .arrow{
-  right: 62.2%;
+  right: 66%;
   position: absolute;
   margin:0;
   width: 0; 
@@ -98,9 +103,9 @@ body{
   border-right:1px solid #eceef4;
   font-size: 12px;
 }
-#checkedNav{
+.checkedNav{
   position: absolute;
-  left:22.5%;
+  left:0%;
   top:250px;
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
@@ -109,7 +114,6 @@ body{
 #navHome{
   flex: 4.2%;
   margin-left:21.3%;
-  color:#1faae2;
 }
 #navAbout{
   flex:10.6%;
@@ -126,6 +130,43 @@ body{
 #navContact{
   flex:6%;
 }
+#navHome:hover{
+  color:#1faae2;
+}
+#navHome:hover ~.checkedNav{
+  left:22.5%;
+}
+#navAbout:hover{
+  color:#1faae2;
+}
+#navAbout:hover ~.checkedNav{
+  left:28.5%;
+}
+#navWeDo:hover{
+  color:#1faae2;
+}
+#navWeDo:hover ~.checkedNav{
+  left:36.5%;
+}
+#navProject:hover{
+  color:#1faae2;
+}
+#navProject:hover ~.checkedNav{
+  left:44%;
+}
+#navTeam:hover{
+  color:#1faae2;
+}
+#navTeam:hover ~.checkedNav{
+  left:51.5%;
+}
+#navContact:hover{
+  color:#1faae2;
+}
+#navContact:hover ~.checkedNav{
+  left:57.5%;
+}
+
 #search{
   justify-content: start;
   margin-left:7.5%;
