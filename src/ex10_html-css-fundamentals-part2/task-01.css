@@ -1,0 +1,27 @@
+.blockImg{
+  position: relative;
+  width:150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 100px;
+  margin-top:50px;
+}
+#circleImg{
+  width: auto;
+  position: absolute;
+  overflow: hidden;
+  left:-95px;
+  top:-50px;
+}
+
+#crossImg{
+  width: auto;
+  position: absolute;
+  overflow: hidden;
+  left:-95px;
+  top:-50px;
+  -webkit-mask-image: url("image/image-mask.png");
+  mask-image: url("image/image-mask.png");
+  -webkit-mask-size: 300px 300px;
+}
