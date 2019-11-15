@@ -61,7 +61,7 @@ function goBack(){
     imageNext.src=arrayPictures[0];
     imageBack.src=arrayPictures[currentNumber-1];
   }
-  if(currentNumber===0){
+  else if(currentNumber===0){
     img.src=arrayPictures[currentNumber];
     imageNext.src=arrayPictures[1];
     imageBack.src=arrayPictures[arrayPictures.length-1];
