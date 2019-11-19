@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="task-02.css">
+  <title>Задание 2</title>
+</head>
+  <body>
+    <form action='http://httpbin.org/post' method="post">
+      <fieldset>  
+        <legend> Personal data</legend>
+        <label for="surname">Surname</label>
+        <input type="text" id='surname'><br>  
+        <label for="firstname">First Name</label>
+        <input type="text" id='firstname'><br>  
+        <label for="middlename">Middle Name</label>
+        <input type="text" id='middlename'><br>
+        <div class ='radioGroup'>
+        <p class='labelForRadioGen'>You are&nbsp;</p>
+          <p><input name='gender' type="radio" class='radioGen' checked>Male</p>
+          <p><input name='gender' type="radio" class='radioGen'>Female</p><br>
+        </div>
+        <label for="age">Age</label>
+        <input type="number" min=18 max=101 id='age'> <br> 
+         <label for="country">Country of Residence</label>
+        <select id="country">
+          <option disabled selected>Выберите страну</option>
+          <option>Russia</option>
+        </select><br> 
+        <label for="city1">City</label>
+        <input type="checkbox" id='city1' value='Ryazan'>Ryazan
+        <input type="checkbox" id='city2' value='Moscow'>Moscow <br> 
+        <label for="photo">Photography</label>
+        <input type="file" id='photo'>
+        <hr> 
+
+        <label for="profession">title</label>
+        <select id="profession" multiple>
+          <option id='technologies' disabled>Technologies</option>
+          <option >WebMaster</option>
+          <option>DataBase Administrator</option>
+          <option id='finance' disabled>Finance</option>
+          <option >EconomicPlanning</option>
+          <option>Management Accounting</option>
+          <option>Budgating and Planning</option>
+        </select><br> 
+        <label for="salary">Salary</label>
+        <input type="range" id='salary'> <br> 
+        <textarea cols="45" rows="10">Tell us about yourself....</textarea>
+      </fieldset>
+      <fieldset>  
+        <legend>Contact Information</legend>
+        <label for="site">Site</label>
+        <input type="text" id='site'><br>  
+        <label for="email">Email</label>
+        <input type="text" id='email'><br>  
+        <label for="phone">Phone</label>
+        <input type="text" id='phone'><br>
+      </fieldset>
+      <label for="password">Password</label>
+      <input type="text" id='password' required><br>
+      <input type="submit">
+      <input type="reset">
+
+    </form>
+  </body>
+</html>

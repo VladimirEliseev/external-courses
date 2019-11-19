@@ -1,0 +1,24 @@
+body{
+  font-size:12pt;
+}
+input,select,textarea,label{
+  margin-top: 10px;
+}
+.radioGroup{
+  display: flex;
+}
+.labelForRadioGen{
+  margin-top:25px;
+}
+option{
+  margin-left:10px;
+}
+#technologies, #finance{
+  font-weight: bold;
+  font-size:10pt;
+  color:black;
+  margin-left:0px;
+}
+#profession{
+  height: 125px;
+}

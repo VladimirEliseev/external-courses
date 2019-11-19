@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Font/Roboto.ttf');
+  src: url('Font/Robotolight.ttf')
+}
+body{
+  margin:0;
+  font-family: 'Roboto';
+
+}
+.header{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  background: #0067A3;
+  font-size: 28px;
+}
+.infoBlock{
+  position: relative;
+  flex:50%;
+  height: 36px;
+  left: 0.8%;
+  top: 10px;
+}
+.navicon{
+  position: absolute;
+  left:0;
+  width:6%;
+  height:38px;
+
+}
+.name{
+  position: absolute;
+  left:5%;
+  width:90%;
+  height: 100%;
+  color:white;
+  padding-left:10px;
+  white-space: nowrap;
+}
+.personalInfo{
+  display: flex;
+  flex:50%;
+  justify-content: flex-end;
+}
+.addButton{
+  background-color:white;
+  border-radius: 5px;
+  width: 181px;
+  height: 33px;
+  margin-right: 50px;
+  margin-top: 10px;
+  border:0;
+}
+.addButton:hover{
+  cursor:pointer;
+}
+.logo{
+  margin-right: 28px;
+  margin-top: 8px;
+  display: flex;
+}
+.logoUser{
+  height: 40px;
+  width: 40px;
+}
+.arrow{
+  position: absolute;
+  width:24px;
+  height: 100%;
+  right:1px;
+  top:0;
+  background-color:#0067A3 ;
+  border:0;
+}
+.arrow:hover{
+  cursor: pointer;
+}
+.arrow:before,
+.arrow:after{
+  content: '';
+  position: absolute;
+  top:28px;
+  width: 12px;
+  height: 0.1em;
+  background-color: white;
+}
+.arrow::before {
+  left:2px;
+  transform: rotate(45deg);
+}
+.arrow::after {
+  left:10px;
+  transform: rotate(-45deg);
+}
+.dropDown{
+  position: absolute;
+  top:56px;
+  right:0;
+  background-color: #0067A3;
+  height: 140px;
+  width: 180px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top:2px solid #111861;
+  box-shadow: 0 0 10px rgba(0, 103, 163, 0.8); 
+}
+.dropDown > button{
+  margin-top:10px;
+  margin-left: 10px;
+  display: block;
+  font-size: 18px;
+  height: 30px;
+  width:160px;
+  background-color: white;
+  color:black;
+  border:0;
+  border-radius: 5px;
+}
+.dropDown > button:hover{
+  cursor: pointer;
+  background-color: lightblue;
+}
+.footer{
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 37px;
+  padding-top:19px;
+  background: #0067A3;
+  color:white;
+  font-size: 18px;
+}
+.activeTask{
+  flex-grow:1;
+  display: flex;
+  justify-content:flex-end; 
+  white-space: nowrap;
+}
+.finishedTask{
+  flex-grow: 5;
+  display: flex;
+  margin-left:30px;
+  white-space: nowrap;
+
+}
+.personalName{
+  flex-grow:1;
+  margin-right:20px;
+  display: flex;
+  justify-content:flex-end; 
+  white-space: nowrap;
+}
