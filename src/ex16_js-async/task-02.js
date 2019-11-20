@@ -1,15 +1,15 @@
-function debounce(callback,delay){
+function debounce(func,delay){
   let time;
-  const checkTimer=function(){
+  const callback=function(){
   clearTimeout(time);
   time=setTimeout(function(){
-    callback.call(debounce);
+    func();
     },delay);
   }
-  return checkTimer
+  return callback
 }
 
-const func=debounce(search,1000);
+const debounceContext=debounce(search,1000);
 
 function search(){
   const input=document.querySelector('.search');
@@ -27,4 +27,4 @@ function search(){
   }
 }
 
-document.querySelector('.search').addEventListener('input',func);
+document.querySelector('.search').addEventListener('input',debounceContext);
