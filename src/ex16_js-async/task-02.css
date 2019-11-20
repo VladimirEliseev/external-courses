@@ -1,0 +1,21 @@
+body{
+ display: flex;
+ justify-content: center;
+}
+main{
+ display: flex;
+ flex-direction: column;
+}
+input{
+ border-radius: 10px;
+ border:2px solid gray;
+ height: 30px;
+ width:250px;
+}
+dd{
+ text-align: center; 
+ margin:0;
+ font-size:20px;
+ margin-top:3px;
+ border:3px solid red;
+}
