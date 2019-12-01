@@ -1,0 +1,128 @@
+@import url('./src/components/header/header.css');
+@import url('./src/components/header/tittle/tittle.css');
+@import url('./src/components/header/addButton/addButton.css');
+@import url('./src/components/header/logo/logo.css');
+@import url('./src/components/main/main.css');
+@import url('./src/components/main/board/board.css');
+@import url('./src/components/main/board/buttonBoard/buttonBoard.css');
+@import url('./src/components/main/board/listTask/listTask.css');
+@import url('./src/components/main/board/buttonAddCard/buttonAddCard.css');
+@import url('./src/components/footer/footer.css');
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('src/fonts/Roboto.ttf');
+  src: url('src/fonts/Robotolight.ttf');
+}
+body{
+  margin:0;
+  font-family: 'Roboto';
+}
+button{
+  cursor:pointer;
+}
+button:hover{
+  color:black;
+}
+.infoBlock{
+  position: relative;
+  flex:50%;
+  height: 36px;
+  left: 0.8%;
+  top: 10px;
+}
+.navicon{
+  position: absolute;
+  left:0;
+  height:38px;
+}
+.name{
+  position: absolute;
+  left:5%;
+  height: 100%;
+  padding-left:10px;
+}
+.personalInfo{
+  display: flex;
+  flex:50%;
+  justify-content: flex-end;
+}
+.addButton{
+  margin-right: 50px;
+  margin-top: 10px;
+}
+.logo{
+  margin-right: 28px;
+  margin-top: 8px;
+}
+.arrow{
+  position: absolute;
+  right:1px;
+  top:0;
+}
+.dropDown{
+  position: absolute;
+  top:56px;
+  right:0;
+}
+.dropDown > button{
+  margin-top:10px;
+  margin-left: 10px;
+  display: block;
+}
+.main{
+  min-width:700px;
+  min-height:610px;
+}
+.headerBoard{
+  margin-top:5px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mainBoard{
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+  height: 40px;
+  max-height: 500px;
+  overflow:auto;
+}
+.mainBoard::-webkit-scrollbar-track {
+  background-color: white;
+}
+.mainBoard::-webkit-scrollbar {
+  width:12px;
+}
+.mainBoard::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 5px;
+}
+.addCard{
+  margin-top:10px;
+  width:40%;
+}
+.footer{
+  bottom: 0;
+  padding-top:19px;
+}
+.activeTask{
+  flex-grow:1;
+  display: flex;
+  justify-content:flex-end; 
+  white-space: nowrap;
+}
+.finishedTask{
+  flex-grow: 5;
+  display: flex;
+  margin-left:30px;
+  white-space: nowrap;
+
+}
+.personalName{
+  flex-grow:1;
+  margin-right:20px;
+  display: flex;
+  justify-content:flex-end; 
+  white-space: nowrap;
+}
