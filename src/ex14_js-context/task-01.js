@@ -32,7 +32,11 @@ const calculator={
   },
 
   fetchData:function(callback){
-    return callback.call(this, 500);
+    const emulator = callback.bind(this);
+    return new Promise((resolve)=>{
+      setTimeout(()=>{
+        resolve(emulator(500))},2000)
+    })
   },
 
   getResult:function(){
@@ -46,5 +50,3 @@ const calculator={
 };
 
 module.exports=calculator;
-
-

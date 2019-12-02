@@ -1,3 +1,4 @@
+const maxCoutMistake=6;
 class Hangman{
   constructor(word){
     this.word=word;
@@ -9,7 +10,7 @@ class Hangman{
     }
   }
   guess(letter){
-    if(this.mistake!==6){
+    if(this.mistake!==maxCoutMistake){
       if(this.word.includes(letter)){
         for(let i=0;i<this.word.length;i++){
           if(letter===this.word[i]){
@@ -27,7 +28,7 @@ class Hangman{
         this.mistake++;
         this.wrongLetters.push(letter);
         let stringWrongLetters=this.wrongLetters.join();
-        console.log('wrong letter, errors left '+(6-this.mistake)+' | '+stringWrongLetters);
+        console.log('wrong letter, errors left '+(maxCoutMistake-this.mistake)+' | '+stringWrongLetters);
       }
     }else{
       console.log('You lose. Start method StartAgain for Restart');
@@ -38,13 +39,13 @@ class Hangman{
     return this.results.join('');
   }
   getErrorsLeft(){
-    return 6-this.mistake
+    return maxCoutMistake-this.mistake
   }
   getWrongSymbols(){
     return this.wrongLetters
   }
   getStatus(){
-    return this.wrongLetters.join('')+' | errors left '+(6-this.mistake);
+    return this.wrongLetters.join('')+' | errors left '+(maxCoutMistake-this.mistake);
   }
   startAgain(newWord){
      this.word=newWord;
