@@ -34,6 +34,7 @@ Present.prototype.searchSweet=function(name){
       return this.sweets[i];
     }
   }
+  return 'Не найдено';
 };
 
 const snikers=new Candy(true);

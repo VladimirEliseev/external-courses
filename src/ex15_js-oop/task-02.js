@@ -35,6 +35,7 @@ class Room{
         return this.technics[i];
       }
     }
+    return 'Не найдено';
   }
 }
 
