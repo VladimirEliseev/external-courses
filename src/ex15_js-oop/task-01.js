@@ -1,30 +1,32 @@
-function Sweet(name,weigth,calorie){
+function Sweet(name,weigth,calories){
   this.name=name;
   this.weigth=weigth;
-  this.calorie=calorie;
+  this.calories=calories;
 }
 
 function Candy(isChocolate){
   this.isChocolate=isChocolate;
 }
+Candy.prototype=new Sweet();
 
 function Cookie(typeTastry){
   this.typeTastry=typeTastry;
 }
+Cookie.prototype=new Sweet();
 
 function Present(sweets){
   this.sweets=sweets;
 }
-Present.prototype.GetAllCalorie=function(){
-  let calorie=0;
+Present.prototype.getAllCalories=function(){
+  let calories=0;
   this.sweets.forEach(element=>{
-    calorie+=element.calorie;
+    calories+=element.calories;
   });
-  return calorie;
+  return calories;
 }
-Present.prototype.sortCalorie=function(){
- return this.sweets.sort(function(first,second){
-   return first.calorie - second.calorie});
+Present.prototype.sortCalories=function(){
+ return this.sweets.sort(function(a,b){
+   return a.calories - b.calories});
 };
 Present.prototype.searchSweet=function(name){
   for(let i=0;i<this.sweets.length;i++){
@@ -37,18 +39,18 @@ Present.prototype.searchSweet=function(name){
 const snikers=new Candy(true);
 snikers.name='Сникерс';
 snikers.weigth=100;
-snikers.calorie=278;
+snikers.calories=278;
 const bonpari=new Candy(false);
 bonpari.name='Бон пари';
 bonpari.weigth=12;
-bonpari.calorie=32;
+bonpari.calories=32;
 const oreo=new Cookie('Sugar');
 oreo.name='Орео';
 oreo.weigth=85;
-oreo.calorie=135;
+oreo.calories=135;
 
 const myPresent=new Present([snikers,bonpari,oreo]);
 
-console.log(myPresent.GetAllCalorie());
+console.log(myPresent.getAllCalories());
 console.log(myPresent.searchSweet('Сникерс'));
-console.log(myPresent.sortCalorie());
+console.log(myPresent.sortCalories());
