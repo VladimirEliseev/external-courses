@@ -20,7 +20,7 @@ button:hover{
   background: #0067A3;
   font-size: 28px;
 }
-.infoBlock{
+.title{
   position: relative;
   flex:50%;
   height: 36px;
@@ -42,7 +42,7 @@ button:hover{
   padding-left:10px;
   white-space: nowrap;
 }
-.personalInfo{
+.userBlock{
   display: flex;
   flex:50%;
   justify-content: flex-end;
@@ -156,7 +156,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
 }
-.mainBoard{
+.tasks{
   display: flex;
   flex-direction: column;
   min-height: 30px;
@@ -164,17 +164,17 @@ button:hover{
   max-height: 500px;
   overflow:auto;
 }
-.mainBoard::-webkit-scrollbar-track {
+.tasks::-webkit-scrollbar-track {
   background-color: white;
 }
-.mainBoard::-webkit-scrollbar {
+.tasks::-webkit-scrollbar {
   width:12px;
 }
-.mainBoard::-webkit-scrollbar-thumb {
+.tasks::-webkit-scrollbar-thumb {
   background-color: gray;
   border-radius: 5px;
 }
-.buttonBoard{
+.menu{
   border:0;
   font-weight: bolder;
   font-size: 18px;
@@ -187,13 +187,14 @@ button:hover{
   border:0;
   font-size: 18px;
 }
-.listTask{
+.task{
   margin:0;
   margin-top:5px;
   word-wrap: break-word;
-
+  list-style-type: none;
+  padding: 0;
 }
-.listTask>dd{
+.task>li{
   margin:0;
   margin-bottom:10px;
   background-color: white;
@@ -201,7 +202,7 @@ button:hover{
   padding:5px 0;
 }
 
-.addCard{
+.addList{
   display: flex;
   justify-content: flex-start;
   background: lightgray;
@@ -210,9 +211,6 @@ button:hover{
   width:40%;
   font-size:18px;
   color:#3b3737;
-}
-.addCard:hover{
-
 }
 .footer{
   display: flex;

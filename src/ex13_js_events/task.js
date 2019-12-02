@@ -1,19 +1,19 @@
 let arrow=document.querySelector('.arrow');
-let blockPersonalInfo=document.querySelector('.personalInfo');
+let blockPersonalInfo=document.querySelector('.userBlock');
 let boards=document.getElementsByClassName('board');
-let mainTasks=document.getElementsByClassName('mainBoard');
-let buttonAddTasks=document.getElementsByClassName('addCard');
-let listTasks=document.getElementsByClassName('listTask');
+let mainTasks=document.getElementsByClassName('tasks');
+let buttonAddTasks=document.getElementsByClassName('addList');
+let listTasks=document.getElementsByClassName('task');
 let countBacklog=0;
 let backlogTasks=[],readyTasks=[],inProcessTasks=[],finishedTasks=[];
 let onDropDown=false;
 
-function loadTask(){
+function loadTasks(){
   backlogTasks=JSON.parse(localStorage.getItem('keyBacklog'));
   readyTasks=JSON.parse(localStorage.getItem('keyReady'));
   inProcessTasks=JSON.parse(localStorage.getItem('keyInprocess'));
   finishedTasks=JSON.parse(localStorage.getItem('keyFinished'));
-    if(backlogTasks===null){
+    if(!backlogTasks){
       backlogTasks=[];
       buttonAddTasks[1].disabled=true;
       buttonAddTasks[1].style.color='#9c9595';
@@ -36,8 +36,8 @@ function loadTask(){
     }
     let tasksBacklogIndex=[];
     for(let i=0;i<backlogTasks.length;i++){
-      tasksBacklogIndex[i]=document.createElement('dd');
-      tasksBacklogIndex[i].className='ddBacklog';
+      tasksBacklogIndex[i]=document.createElement('li');
+      tasksBacklogIndex[i].className='liBacklog';
       listTasks[0].append(tasksBacklogIndex[i]);
       tasksBacklogIndex[i].innerHTML=backlogTasks[i];
       boards[0].style.height=boards[0].offsetHeight+tasksBacklogIndex[i].offsetHeight+'px';
@@ -45,8 +45,8 @@ function loadTask(){
     }
     let tasksReadyIndex=[];
     for(let i=0;i<readyTasks.length;i++){
-      tasksReadyIndex[i]=document.createElement('dd');
-      tasksReadyIndex[i].className='ddReady';
+      tasksReadyIndex[i]=document.createElement('li');
+      tasksReadyIndex[i].className='liReady';
       listTasks[1].append(tasksReadyIndex[i]);
       tasksReadyIndex[i].innerHTML=readyTasks[i];
       boards[1].style.height=boards[1].offsetHeight+tasksReadyIndex[i].offsetHeight+'px';
@@ -54,8 +54,8 @@ function loadTask(){
     }
     let tasksInProcessIndex=[];
     for(let i=0;i<inProcessTasks.length;i++){
-      tasksInProcessIndex[i]=document.createElement('dd');
-      tasksInProcessIndex[i].className='ddInprocess';
+      tasksInProcessIndex[i]=document.createElement('li');
+      tasksInProcessIndex[i].className='liInprocess';
       listTasks[2].append(tasksInProcessIndex[i]);
       tasksInProcessIndex[i].innerHTML=inProcessTasks[i];
       boards[2].style.height=boards[2].offsetHeight+tasksInProcessIndex[i].offsetHeight+'px';
@@ -63,8 +63,8 @@ function loadTask(){
     }
     let tasksFinishedIndex=[];
     for(let i=0;i<finishedTasks.length;i++){
-      tasksFinishedIndex[i]=document.createElement('dd');
-      tasksFinishedIndex[i].className='ddFinished';
+      tasksFinishedIndex[i]=document.createElement('li');
+      tasksFinishedIndex[i].className='liFinished';
       listTasks[3].append(tasksFinishedIndex[i]);
       tasksFinishedIndex[i].innerHTML=finishedTasks[i];
       boards[3].style.height=boards[3].offsetHeight+tasksFinishedIndex[i].offsetHeight+'px';
@@ -72,7 +72,7 @@ function loadTask(){
     }
 }
 function deleteBacklog(){
-  let readyTasks= document.getElementsByClassName('ddBacklog');
+  let readyTasks= document.getElementsByClassName('liBacklog');
     for(let i=0;i<backlogTasks.length;i++){
       readyTasks[i].innerHTML=backlogTasks[i];
     }
@@ -80,13 +80,13 @@ function deleteBacklog(){
       buttonAddTasks[1].disabled=true;
       buttonAddTasks[1].style.pointerEvents='none';
       buttonAddTasks[1].style.color='#9c9595';
-      let delElem=document.getElementsByClassName('ddBacklog')[0];
+      let delElem=document.getElementsByClassName('liBacklog')[0];
       boards[0].style.height=boards[0].offsetHeight-delElem.offsetHeight-15+'px';
       mainTasks[0].style.height=boards[0].offsetHeight-50+'px';
       delElem.remove();
       
     }else{
-      let delElem=document.getElementsByClassName('ddBacklog')[backlogTasks.length];
+      let delElem=document.getElementsByClassName('liBacklog')[backlogTasks.length];
       boards[0].style.height=boards[0].offsetHeight-delElem.offsetHeight-15+'px';
       mainTasks[0].style.height=boards[0].offsetHeight-50+'px';
       delElem.remove();
@@ -95,7 +95,7 @@ function deleteBacklog(){
 }
 
 function deleteReady(){
-  let inProcessTasks= document.getElementsByClassName('ddReady');
+  let inProcessTasks= document.getElementsByClassName('liReady');
     for(let i=0;i<readyTasks.length;i++){
       inProcessTasks[i].innerHTML=readyTasks[i];
     }
@@ -103,19 +103,19 @@ function deleteReady(){
       buttonAddTasks[2].disabled=true;
       buttonAddTasks[2].style.pointerEvents='none';
       buttonAddTasks[2].style.color='#9c9595';
-      let delElem=document.getElementsByClassName('ddReady')[0];
+      let delElem=document.getElementsByClassName('liReady')[0];
       boards[1].style.height=boards[1].offsetHeight-delElem.offsetHeight-15+'px';
       mainTasks[1].style.height=boards[1].offsetHeight-50+'px';
       delElem.remove();
     }else{
-      let delElem=document.getElementsByClassName('ddReady')[readyTasks.length];
+      let delElem=document.getElementsByClassName('liReady')[readyTasks.length];
       boards[1].style.height=boards[1].offsetHeight-delElem.offsetHeight-15+'px';
       mainTasks[1].style.height=boards[1].offsetHeight-50+'px';
       delElem.remove();
     }
 }
 function deleteInprocess(){
-  let finishedTasks= document.getElementsByClassName('ddInprocess');
+  let finishedTasks= document.getElementsByClassName('liInprocess');
   for(let i=0;i<inProcessTasks.length;i++){
     finishedTasks[i].innerHTML=inProcessTasks[i];
   }
@@ -123,12 +123,12 @@ function deleteInprocess(){
     buttonAddTasks[3].disabled=true;
     buttonAddTasks[3].style.pointerEvents='none';
     buttonAddTasks[3].style.color='#9c9595';
-    let delElem=document.getElementsByClassName('ddInprocess')[0];
+    let delElem=document.getElementsByClassName('liInprocess')[0];
     boards[2].style.height=boards[2].offsetHeight-delElem.offsetHeight-15+'px';
     mainTasks[2].style.height=boards[2].offsetHeight-50+'px';
     delElem.remove();
   }else{
-    let delElem=document.getElementsByClassName('ddBacklog')[inProcessTasks.length];
+    let delElem=document.getElementsByClassName('liBacklog')[inProcessTasks.length];
     boards[2].style.height=boards[2].offsetHeight-delElem.offsetHeight-15+'px';
     mainTasks[2].style.height=boards[2].offsetHeight-50+'px';
     delElem.remove();
@@ -138,15 +138,15 @@ function changeDropDown(){
   if(!onDropDown){
     arrow.style.transform='rotate(180deg)';
     onDropDown=true;
-    openDropDown();
+    showTasksList();
   }else{
     arrow.style.transform='rotate(360deg)';
     onDropDown=false;
-    closeDropDown();
+    hideTasksList();
   } 
 }
 
-function openDropDown(){
+function showTasksList(){
   let blockDropDown=document.createElement('div');
   blockDropDown.className='dropDown';
   blockPersonalInfo.append(blockDropDown);
@@ -261,8 +261,8 @@ function saveBacklog(){
   str=input.value;
   input.parentNode.removeChild(input);
   if(str!==''){
-    let task=document.createElement('dd');
-    task.className='ddBacklog';
+    let task=document.createElement('li');
+    task.className='liBacklog';
     listTasks[0].append(task);
     task.innerHTML=str;
     backlogTasks[backlogTasks.length]=str;
@@ -281,8 +281,8 @@ function saveReady(){
   let selectIndex=select.selectedIndex;
   select.parentNode.removeChild(select);
   if(selectedValue!=='Выберите задачу'){
-    let task=document.createElement('dd');
-    task.className='ddReady';
+    let task=document.createElement('li');
+    task.className='liReady';
     listTasks[1].append(task);
     task.innerHTML=selectedValue;
     readyTasks[readyTasks.length]=selectedValue;
@@ -302,8 +302,8 @@ function saveInprocess(){
   let selectIndex=select.selectedIndex;
   select.parentNode.removeChild(select);
   if(selectedValue!=='Выберите задачу'){
-    let task=document.createElement('dd');
-    task.className='ddInprocess';
+    let task=document.createElement('li');
+    task.className='liInprocess';
     listTasks[2].append(task);
     task.innerHTML=selectedValue;
     inProcessTasks[inProcessTasks.length]=selectedValue;
@@ -323,8 +323,8 @@ function saveFinished(){
   let selectIndex=select.selectedIndex;
   select.parentNode.removeChild(select);
   if(selectedValue!=='Выберите задачу'){
-    let task=document.createElement('dd');
-    task.className='ddFinished';
+    let task=document.createElement('li');
+    task.className='liFinished';
     listTasks[3].append(task);
     task.innerHTML=selectedValue;
     finishedTasks[finishedTasks.length]=selectedValue;
@@ -339,12 +339,12 @@ function saveFinished(){
   }
 }
 
-function closeDropDown(){
+function hideTasksList(){
   let delDropDown=document.querySelector('.dropDown');
   delDropDown.parentNode.removeChild(delDropDown);
 }
 
-addEventListener('DOMContentLoaded',loadTask);
+addEventListener('DOMContentLoaded',loadTasks);
 arrow.addEventListener('click',changeDropDown);
 buttonAddTasks[0].addEventListener('click',addBacklog);
 buttonAddTasks[1].addEventListener('click',addReady);
