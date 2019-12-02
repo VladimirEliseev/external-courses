@@ -1,19 +1,17 @@
-function debounce(func,delay){
-  let time;
-  const callback=function(){
-  clearTimeout(time);
-  time=setTimeout(function(){
-    func();
-    },delay);
+function debounce(cb,delay){
+  let timeID;
+  return function(){
+  clearTimeout(timeID);
+  timeID=setTimeout(()=>{cb.apply(this)}
+    ,delay);
   }
-  return callback
 }
 
 const debounceContext=debounce(search,1000);
 
 function search(){
   const input=document.querySelector('.search');
-  let array=document.getElementsByClassName('dd');
+  let array=document.getElementsByClassName('li');
   for(let i=0;i<array.length;i++){
     array[i].style.border='3px solid green';
     if(input.value===''){

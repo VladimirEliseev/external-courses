@@ -12,10 +12,14 @@ input{
  height: 30px;
  width:250px;
 }
-dd{
+ul{
+ padding: 0;
+}
+li{
  text-align: center; 
  margin:0;
  font-size:20px;
  margin-top:3px;
  border:3px solid red;
+ list-style-type: none
 }
